@@ -16,8 +16,8 @@ public sealed class GetByIdGameRegionQueryHandler : IRequestHandler<GetByIdGameR
         var gameRegion = await _context
             .GameRegions
             .AsNoTracking()
-            .Include(x => x.Game)
+            .Select(x => new GameRegionGetByIdDto(x.Id, x.Name, x.Code, x.GameId, x.Game.Name))
             .FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
-        return GameRegionGetByIdDto.Create(gameRegion!);
+        return gameRegion!;
     }
 }

@@ -22,7 +22,7 @@ public sealed class GetAllGameRegionsQueryHandler : IRequestHandler<GetAllGameRe
             query = query.Where(x => x.Code.ToLower().Contains(request.Code.ToLower()));
         return query
         .AsNoTracking()
-        .Select(x => GameRegionGetAllDto.Create(x))
+        .Select(x => new GameRegionGetAllDto(x.Id, x.Name, x.Code, x.GameId))
         .ToListAsync(cancellationToken);
     }
     // public Task<List<GameRegionGetAllDto>> Handle(GetAllGameRegionsQuery request, CancellationToken cancellationToken)
