@@ -14,12 +14,15 @@ public sealed class GetAllGameRegionsQueryHandler : IRequestHandler<GetAllGameRe
     public Task<List<GameRegionGetAllDto>> Handle(GetAllGameRegionsQuery request, CancellationToken cancellationToken)
     {
         var query = _context.GameRegions.AsQueryable();
-        if (request.GameId.HasValue)
-            query = query.Where(x => x.GameId == request.GameId);
+        
+        query = query.Where(x => x.GameId == request.GameId);
+
         if (!string.IsNullOrEmpty(request.Name))
             query = query.Where(x => x.Name.ToLower().Contains(request.Name.ToLower()));
+
         if (!string.IsNullOrEmpty(request.Code))
             query = query.Where(x => x.Code.ToLower().Contains(request.Code.ToLower()));
+
         return query
         .AsNoTracking()
         .Select(x => new GameRegionGetAllDto(x.Id, x.Name, x.Code, x.GameId))

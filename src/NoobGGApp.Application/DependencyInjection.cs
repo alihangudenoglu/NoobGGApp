@@ -15,6 +15,9 @@ public static class DependencyInjection
             config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
             config.AddBehavior(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
             // config.AddOpenBehavior(typeof(ValidationBehavior<,>));
+
+            config.AddBehavior(typeof(IPipelineBehavior<,>), typeof(CachingBehavior<,>));
+
         });
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
         return services;
