@@ -1,6 +1,4 @@
 ﻿using NoobGGApp.Domain.Common.Entities;
-using NoobGGApp.Domain.ValueObjects;
-using TSID.Creator.NET;
 
 namespace NoobGGApp.Domain.Entities;
 
@@ -12,5 +10,7 @@ public sealed class Game : EntityBase<long>
     public string Tags { get; set; }
 
     public ICollection<GameRegion> GameRegions { get; set; } = [];
+    public ICollection<GameMode> GameModes { get; set; } = [];
+    public ICollection<GameRank> GameRanks { get; set; } = [];
 
 }
