@@ -1,6 +1,8 @@
 using NoobGGApp.Application;
+using NoobGGApp.Application.Common.Interfaces;
 using NoobGGApp.Infrastructure;
 using NoobGGApp.WebApi.Extensions;
+using NoobGGApp.WebApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
+
+builder.Services.AddScoped<ICurrentUserService, CurrentUserManager>();
 
 var app = builder.Build();
 

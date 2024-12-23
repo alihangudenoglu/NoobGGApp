@@ -29,7 +29,10 @@ public class Lobby : EntityBase<long>
     // Bu alan optimistic concurrency için eklendi.
     // Bu sayede SaveChanges() esnasında kontrol edilir.
     public byte[] RowVersion { get; private set; }
+
     public ICollection<LobbyLanguage> LobbyLanguages { get; private set; } = [];
+    public ICollection<LobbyMessage> LobbyMessages { get; private set; } = [];
+    public ICollection<LobbyEventHistory> LobbyEventHistories { get; private set; } = [];
 
     public static Lobby Create(long gameId, long gameModeId, long gameRegionId, long customerId)
     {
