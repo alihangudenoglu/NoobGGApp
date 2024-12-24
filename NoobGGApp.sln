@@ -9,11 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{88E22AEC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoobGGApp.Domain", "src\NoobGGApp.Domain\NoobGGApp.Domain.csproj", "{74D42C71-D704-43F5-97ED-F9B837F2C2F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoobGGApp.Application", "src\NoobGGApp.Application\NoobGGApp.Application.csproj", "{89EC4D61-F1C1-47E7-893C-16EEDE3B0CA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoobGGApp.Application", "src\NoobGGApp.Application\NoobGGApp.Application.csproj", "{89EC4D61-F1C1-47E7-893C-16EEDE3B0CA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoobGGApp.Infrastructure", "src\NoobGGApp.Infrastructure\NoobGGApp.Infrastructure.csproj", "{38B61021-69F0-4246-A21C-B52B1F691CB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoobGGApp.Infrastructure", "src\NoobGGApp.Infrastructure\NoobGGApp.Infrastructure.csproj", "{38B61021-69F0-4246-A21C-B52B1F691CB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoobGGApp.WebApi", "src\NoobGGApp.WebApi\NoobGGApp.WebApi.csproj", "{A74FE1D2-A9FC-4002-B9B7-9DEAD43BD56F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoobGGApp.WebApi", "src\NoobGGApp.WebApi\NoobGGApp.WebApi.csproj", "{A74FE1D2-A9FC-4002-B9B7-9DEAD43BD56F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoobGGApp.EmailQueueService", "src\NoobGGApp.EmailQueueService\src\NoobGGApp.EmailQueueService\NoobGGApp.EmailQueueService.csproj", "{10DE034B-ECBB-46AF-9D35-39478DB87FA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{A74FE1D2-A9FC-4002-B9B7-9DEAD43BD56F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A74FE1D2-A9FC-4002-B9B7-9DEAD43BD56F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A74FE1D2-A9FC-4002-B9B7-9DEAD43BD56F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10DE034B-ECBB-46AF-9D35-39478DB87FA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10DE034B-ECBB-46AF-9D35-39478DB87FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10DE034B-ECBB-46AF-9D35-39478DB87FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10DE034B-ECBB-46AF-9D35-39478DB87FA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{89EC4D61-F1C1-47E7-893C-16EEDE3B0CA3} = {82C7C37A-D4AA-45C2-AFDE-3039F46B6047}
 		{38B61021-69F0-4246-A21C-B52B1F691CB4} = {82C7C37A-D4AA-45C2-AFDE-3039F46B6047}
 		{A74FE1D2-A9FC-4002-B9B7-9DEAD43BD56F} = {82C7C37A-D4AA-45C2-AFDE-3039F46B6047}
+		{10DE034B-ECBB-46AF-9D35-39478DB87FA5} = {82C7C37A-D4AA-45C2-AFDE-3039F46B6047}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CC20173B-4634-44E9-93FE-9CE9B2E049DD}

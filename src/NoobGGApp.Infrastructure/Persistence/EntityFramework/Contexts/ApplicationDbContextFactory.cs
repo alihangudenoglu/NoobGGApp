@@ -13,12 +13,14 @@ namespace NoobGGApp.Infrastructure.Persistence.EntityFramework.Contexts
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json")
                 .Build();
+
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
 
             optionsBuilder.UseNpgsql(
                 configuration.GetConnectionString("DefaultConnection"),
                 b => b.MigrationsHistoryTable("__ef_migrations_history"))
                 .UseSnakeCaseNamingConvention();
+
             return new ApplicationDbContext(optionsBuilder.Options, new NullPublisher());
         }
 
